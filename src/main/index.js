@@ -2,6 +2,21 @@
 
 import { app, BrowserWindow } from 'electron'
 
+import '@babel/polyfill'
+import Transport from '@ledgerhq/hw-transport-node-hid'
+// import Transport from "@ledgerhq/hw-transport-web-usb";
+// import Transport from "@ledgerhq/react-native-hw-transport-ble";
+import AppBtc from '@ledgerhq/hw-app-btc'
+
+const getBtcAddress = async() => {
+  console.log("")
+  const transport = await Transport.create()
+  const btc = new AppBtc(transport)
+  const result = await btc.getWalletPublicKey("44'/0'/0'/0/0")
+  return result.bitcoinAddress
+}
+getBtcAddress().then(a => console.log(a))
+
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html

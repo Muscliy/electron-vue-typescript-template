@@ -16,6 +16,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@ledgerhq/hw-app-btc": "^4.64.0",
+    "@ledgerhq/hw-transport-node-hid": "^4.64.0",
     "core-js": "2.6.5",
     "vue": "^2.6.10",
     "vue-property-decorator": "^8.2.1",
@@ -44,7 +46,7 @@
     "cross-env": "^5.2.0",
     "css-hot-loader": "^1.4.4",
     "css-loader": "^3.0.0",
-    "electron": "^5.0.6",
+    "electron": "2.0.4",
     "electron-debug": "^3.0.1",
     "electron-devtools-installer": "^2.2.4",
     "eslint": "^6.0.1",
