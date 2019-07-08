@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "strict": true,
+      "noImplicitReturns": true,
+      "target": "esnext",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "allowJs": true,
+      "jsx": "preserve",
+      //支持.vue 文件不报错
+      "allowSyntheticDefaultImports": true,
+      "plugins": [{ "name": "ts-vue-plugin" }],
+      "lib": [
+        "dom",
+        "es5",
+        "es6",
+        "es7",
+        "es2015.promise"
+      ]
+  },
+  "include": [
+      "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

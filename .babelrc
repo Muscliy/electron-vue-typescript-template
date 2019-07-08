@@ -1,0 +1,31 @@
+{
+  "comments": false,
+  "env": {
+    "main": {
+      "presets": [
+        ["@babel/preset-env", {
+          "modules": false,
+          "targets": {
+            "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+          },
+          "useBuiltIns": "usage"
+        }]
+      ],
+      "plugins": ["transform-vue-jsx"],
+    },
+    "renderer": {
+      "presets": [
+        ["@babel/preset-env", {
+          "targets": { "node": 7 },
+          },
+        ],
+        "@babel/preset-stage-0"
+        ],
+    },
+
+    "test": {
+      "presets": ["@babel/preset-env"],
+      "plugins": ["transform-vue-jsx"]
+    }
+  }
+}

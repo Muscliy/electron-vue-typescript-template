@@ -1,4 +1,4 @@
-# vue-webpack4-babel7
+# electron-vue-typescript-template
 
 > A Vue.js project use webpack4 and babel7
 
